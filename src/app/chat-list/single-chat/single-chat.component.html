@@ -1,0 +1,28 @@
+<div class="header">
+  <div class="team-menu">Team Awesome</div>
+  <div class="channel-menu"><span class="channel-menu_name"><span class="channel-menu_prefix">#</span>{{ room.name }}</span></div>
+</div>
+<div class="main">
+
+  <app-sidebar-chat></app-sidebar-chat>
+
+<div class="message-history">
+  <div *ngFor="let message of messages">
+    <div class="message">
+      <a class="message_profile-pic" href=""></a>
+      <a class="message_username" href="">{{ message.userName }}</a>
+      <span class="message_timestamp">{{ message.atDate|date: 'dd/mm/y à H:mm' }}</span>
+      <span class="message_star"></span>
+      <span class="message_content">{{ message.message }}</span>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="user-menu"><span class="user-menu_profile-pic"></span><span class="user-menu_username">Chika</span><img class="connection_icon" src="data:image/png;base64,iVBORw0KGgoAAAAN..."/><span class="connection_status">online</span></div>
+  <div class="input-box">
+    <form [formGroup]="messageForm" (keydown)="onSaveMessage($event)">
+      <input class="input-box_text" id="myMessage" type="text" formControlName="message"/>
+    </form>
+  </div>
+</div>

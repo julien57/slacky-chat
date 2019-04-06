@@ -7,15 +7,6 @@
   vertical-align: baseline;
 }
 
-.home-chat {
-  position: absolute;
-  font-size: 100px;
-  color: #372c36;
-  top: 40%;
-  left: 40%;
-  opacity: 0.2;
-}
-
 .reset_2, caption, th, td {
   text-align: left;
   font-weight: normal;
@@ -168,6 +159,10 @@ main {
   cursor: pointer;
 }
 
+.channel a {
+  color: white;
+}
+
 .channel-menu_name {
   display: inline-block;
   padding: 0 0.5rem 0 1.5rem;
@@ -236,7 +231,7 @@ main {
   color: #ffffff;
   padding-left: 1rem;
 }
-.active {
+.channel.active {
   background: #4c9689;
 }
 

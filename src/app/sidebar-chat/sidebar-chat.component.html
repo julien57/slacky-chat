@@ -1,0 +1,18 @@
+<div class="listings">
+  <div class="listings_channels">
+    <h2 class="listings_header">Channels <a (click)="onNewRoom()">+</a></h2>
+    <ul class="channel_list" *ngFor="let room of rooms; let i = index">
+      <li class="channel" *ngIf="i > 0 && room.type === 'salon'">
+        <a routerLink="/chat" [ngStyle]="{color: getColor(i)}" class="channel_name" routerLinkActive="active" (click)="onViewRoom(i)"><span><span class="prefix">#</span>{{ room.name }}</span></a>
+      </li>
+    </ul>
+  </div>
+  <div class="listings_direct-messages">
+    <h2 class="listings_header">Direct Messages</h2>
+    <ul class="channel_list" *ngFor="let room of rooms; let i = index">
+      <li class="channel" *ngIf="i > 0 && room.type === 'member'">
+        <a routerLink="/chat" class="channel_name" routerLinkActive="active" (click)="onViewRoom(i)"><span><span class="prefix">#</span>{{ room.name }}</span></a>
+      </li>
+    </ul>
+  </div>
+</div>
