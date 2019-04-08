@@ -1,0 +1,7 @@
+<form [formGroup]="roomForm" (ngSubmit)="onSaveRoom()">
+  <div class="form-group">
+    <label for="name">Nom du salon</label>
+    <input type="text" id="name" class="form-control" formControlName="name">
+  </div>
+  <button class="btn btn-info" type="submit" [disabled]="roomForm.invalid">Enregistrer</button>
+</form>
